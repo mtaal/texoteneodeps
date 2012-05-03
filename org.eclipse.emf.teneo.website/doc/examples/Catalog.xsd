@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.elver.org/store/test/emf/catalog/gen"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:this="http://www.elver.org/store/test/emf/catalog/gen"
+    xmlns:lib="http://www.elver.org/store/test/emf/catalog/gen"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://www.w3.org/2001/XMLSchema">
+	
+	<complexType name="CatalogType">
+		<sequence>
+			<element name="Name" type="ID"/>
+			<element name="Description" type="string"/>
+			<element name="SubCatalog" type="xsd:IDREF" ecore:reference="this:CatalogType" maxOccurs="unbounded" minOccurs="0" />
+			<element name="Product" type="xsd:IDREF" ecore:reference="this:ProductType" maxOccurs="unbounded" minOccurs="0" />
+		</sequence>
+	</complexType>
+	
+	<complexType name="ProductType">
+		<sequence>
+			<element name="Code" type="ID"/>
+			<element name="Description" type="string" nillable="true"/>
+			<element name="Remark" type="this:StringType" minOccurs="1" maxOccurs="unbounded"/>
+			<element name="Price">
+				<complexType>
+					<sequence>
+						<element name="Price" type="double"/>
+						<element name="QuantityTo" type="double"/>
+						<element name="Supplier" type="xsd:IDREF" ecore:reference="this:SupplierType"/>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	
+	<complexType name="SupplierType">
+		<sequence>
+			<element name="Name" type="string"/>
+			<element name="NoOfEmployees" type="int"/>
+		</sequence>
+	</complexType>
+
+	<complexType name="StringType">
+		<sequence>
+			<element name="Value" type="string"/>
+		</sequence>
+	</complexType>
+
+</schema>

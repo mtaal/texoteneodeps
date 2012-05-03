@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false">
+	<class name="org.eclipse.emf.teneo.samples.emf.sample.claim.impl.ClaimImpl" entity-name="Claim" abstract="false" lazy="false" discriminator-value="Claim" table="`pclm_nprc_clm`">
+		<meta attribute="eclassName">Claim</meta>
+		<meta attribute="epackage">http://www.eclipse.org/emf/teneo/samples/emf/sample/claim</meta>
+		<composite-id name="claimCompositeKey" class="org.eclipse.emf.teneo.samples.emf.sample.claim.impl.ClaimCompositeKeyImpl">
+			<key-property name="claimNumber" type="java.lang.String">
+				<column not-null="false" unique="false" name="`clm_nbr`" unique-key="c0"/>
+			</key-property>
+			<key-property name="claimExtensionNumber" type="java.lang.String">
+				<column not-null="false" unique="false" name="`clm_ext_nbr`" unique-key="c0"/>
+			</key-property>
+		</composite-id>
+		<discriminator column="`dtype`" type="string"/>
+		<version name="e_version" column="e_version" access="org.eclipse.emf.teneo.hibernate.mapping.property.VersionPropertyHandler">
+			<meta attribute="syntheticVersion">true</meta>
+		</version>
+		<property name="billingName" lazy="false" insert="true" update="true" not-null="false" unique="false" type="java.lang.String">
+			<column not-null="false" unique="false" name="`billing_name`" length="50"/>
+		</property>
+		<property name="claimGroupVSPId" lazy="false" insert="true" update="true" not-null="false" unique="false" type="java.lang.String">
+			<column not-null="false" unique="false" name="`clm_grp_vsp_id`" length="3"/>
+		</property>
+		<property name="claimStatus" lazy="false" insert="true" update="true" not-null="false" unique="false" type="java.lang.String">
+			<column not-null="false" unique="false" name="`clm_status`" length="2"/>
+		</property>
+		<bag name="claimLine" lazy="true" cascade="all,delete-orphan">
+			<key update="true" foreign-key="claim_claimline">
+				<column name="`clm_nbr`" not-null="false" unique="false"/>
+				<column name="`clm_ext_nbr`" not-null="false" unique="false"/>
+			</key>
+			<one-to-many entity-name="ClaimLine"/>
+		</bag>
+	</class>
+	<class name="org.eclipse.emf.teneo.samples.emf.sample.claim.impl.ClaimLineImpl" entity-name="ClaimLine" abstract="false" lazy="false" discriminator-value="ClaimLine" table="`pclm_nprc_clmln`">
+		<meta attribute="eclassName">ClaimLine</meta>
+		<meta attribute="epackage">http://www.eclipse.org/emf/teneo/samples/emf/sample/claim</meta>
+		<composite-id name="claimLineCompositeKey" class="org.eclipse.emf.teneo.samples.emf.sample.claim.impl.ClaimLineCompositeKeyImpl">
+			<key-many-to-one name="claim" entity-name="Claim" foreign-key="claimlinecompositekey_claim" lazy="false">
+				<column not-null="false" unique="false" name="`clm_nbr`" unique-key="c0"/>
+				<column not-null="false" unique="false" name="`clm_ext_nbr`" unique-key="c0"/>
+			</key-many-to-one>
+			<key-property name="claimLineNumber" type="java.lang.String">
+				<column not-null="false" unique="false" name="`clmln_nbr`" unique-key="c0"/>
+			</key-property>
+		</composite-id>
+		<discriminator column="`dtype`" type="string"/>
+		<version name="e_version" column="e_version" access="org.eclipse.emf.teneo.hibernate.mapping.property.VersionPropertyHandler">
+			<meta attribute="syntheticVersion">true</meta>
+		</version>
+		<property name="claimLineBilledAmount" lazy="false" insert="true" update="true" not-null="true" unique="false" type="java.math.BigDecimal">
+			<column not-null="false" unique="false" name="`clmln_bill_amt`"/>
+		</property>
+		<property name="serviceCode" lazy="false" insert="true" update="true" not-null="true" unique="false" type="java.lang.String">
+			<column not-null="false" unique="false" name="`svc_cd`"/>
+		</property>
+		<property name="claimLineStatus" lazy="false" insert="true" update="true" not-null="false" unique="false" type="java.lang.String">
+			<column not-null="false" unique="false" name="`clmln_status`" length="2"/>
+		</property>
+	</class>
+</hibernate-mapping>

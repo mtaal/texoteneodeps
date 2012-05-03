@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.microsoft.sqlserver.jdbc"
+      label="Microsoft JDBC Driver"
+      version="3.0.1301.101"
+      provider-name="Microsoft">
+
+   <description url="http://msdn.microsoft.com/en-us/sqlserver/aa937724">
+      Release Information
+Microsoft SQL Server JDBC Driver 3.0 
+April 2010
+
+
+INTRODUCTION
+------------
+This file contains late-breaking or other important information
+that supplements the Microsoft SQL Server JDBC Driver
+documentation. You should read this file completely before 
+installing the JDBC driver.
+
+Your feedback is very important to us and we will strive
+to respond to your feedback in a timely manner. For information
+about providing feedback by using the JDBC driver newsgroup and online
+forums, see the Microsoft SQL Server JDBC Driver page at
+http://msdn.microsoft.com/data/jdbc.
+
+
+INSTALLATION
+------------
+Instructions for installing the JDBC driver are located in install.txt.
+Refer to that file for information about installing the JDBC
+driver on Windows and Unix operating systems.
+
+SUPPORTED OPERATING SYSTEMS
+---------------------------
+The Microsoft SQL Server JDBC Driver 3.0 supports the following operating systems: 
+Linux, Unix, Windows Server 2003 Service Pack 2, Windows Server 2008,
+Windows Vista Service Pack 1, Windows XP Service Pack 3,
+Windows Server 2008 R2 and Windows 7.
+
+The list above is an example of some of the supported operating systems.
+The JDBC driver is designed to work on any operating system that supports
+the use of a Java Virtual Machine (JVM).  However, only Sun Solaris, SUSE
+Linux, and Windows XP or later operating systems have been tested.
+
+RELEASE CONTENTS
+----------------
+The Microsoft SQL Server JDBC Driver executable zip or tar file
+unpacks the following files in the specified locations, relative
+to the selected installation directory:
+
+&lt;installation directory&gt;\sqljdbc_&lt;version&gt;\&lt;language&gt;\install.txt
+&lt;installation directory&gt;\sqljdbc_&lt;version&gt;\&lt;language&gt;\release.txt
+&lt;installation directory&gt;\sqljdbc_&lt;version&gt;\&lt;language&gt;\license.txt
+&lt;installation directory&gt;\sqljdbc_&lt;version&gt;\&lt;language&gt;\sqljdbc.jar
+&lt;installation directory&gt;\sqljdbc_&lt;version&gt;\&lt;language&gt;\sqljdbc4.jar
+&lt;installation directory&gt;\sqljdbc_&lt;version&gt;\&lt;language&gt;\auth\x86\sqljdbc_auth.dll
+&lt;installation directory&gt;\sqljdbc_&lt;version&gt;\&lt;language&gt;\auth\x64\sqljdbc_auth.dll
+&lt;installation directory&gt;\sqljdbc_&lt;version&gt;\&lt;language&gt;\auth\ia64\sqljdbc_auth.dll
+&lt;installation directory&gt;\sqljdbc_&lt;version&gt;\&lt;language&gt;\help\default.htm
+&lt;installation directory&gt;\sqljdbc_&lt;version&gt;\&lt;language&gt;\help\index.htm
+&lt;installation directory&gt;\sqljdbc_&lt;version&gt;\&lt;language&gt;\help\toc.htm
+&lt;installation directory&gt;\sqljdbc_&lt;version&gt;\&lt;language&gt;\help\html\&lt;doc pages...&gt;
+&lt;installation directory&gt;\sqljdbc_&lt;version&gt;\&lt;language&gt;\help\local\&lt;doc files...&gt;
+&lt;installation directory&gt;\sqljdbc_&lt;version&gt;\&lt;language&gt;\help\samples\&lt;sample files...&gt;
+&lt;installation directory&gt;\sqljdbc_&lt;version&gt;\&lt;language&gt;\xa\xa_install.sql
+&lt;installation directory&gt;\sqljdbc_&lt;version&gt;\&lt;language&gt;\xa\x86\sqljdbc_xa.dll
+&lt;installation directory&gt;\sqljdbc_&lt;version&gt;\&lt;language&gt;\xa\x64\sqljdbc_xa.dll
+&lt;installation directory&gt;\sqljdbc_&lt;version&gt;\&lt;language&gt;\xa\ia64\sqljdbc_xa.dll
+
+
+CHANGE LIST
+-----------
+Changes from 2.0 to 3.0:
+
+327029 The &quot;Failed to load the sqljdbc_auth.dll&quot; exception now contains additional
+       information about the cause of the failure.
+
+329180 Application servers can now use the Wrapper interface to implement proxies of
+       SQLServerDataSource instances and other classes implementing the Wrapper interface.
+
+293533 The return value of a stored procedure executed by a table trigger no longer impacts
+       the update count of an INSERT, UPDATE, or DELETE query, when lastUpdateCount=true
+
+345336 An infinite loop in Statement.close() after its underlying connection is closed
+       unexpectedly has been fixed.
+
+351393 executeUpdate now returns the correct update count for a BULK INSERT query.
+
+327052 ResultSet.getHoldability() now returns ResultSet.HOLD_CURSORS_OVER_COMMIT when
+       implicit cursor conversion produces a result set that is not backed by a
+       server cursor.
+
+374320 An infinite loop in ResultSet.close() has been fixed when the method encounters a
+       lock timeout or other row error.
+
+373923 The driver now uses the TLS protocol for its SSL communications, to comply with
+       the Federal Information Processing Standard (FIPS).
+
+376322 The driver now connects to a failover partner acting as primary in a Kerberos
+       environment.
+
+305612 ResultSet.getInt(&quot;DATA_TYPE&quot;) no longer throws a NullPointerException with
+       the TABLE SQL type.
+
+411695 getSchemas should return schema information
+       In previous versions of the driver, the driver returned user information instead of
+       the schema information.The driver will now return schema information and supports pattern
+       matching for schema name per JDBC spec.	
+
+
+KNOWN ISSUES
+------------
+The following are known issues with the Microsoft SQL Server JDBC Driver 3.0:
+
+
+1) PARAMETER METADATA LIMITATIONS WITH THE SQL MERGE STATEMENT
+
+PreparedStatement.getParameterMetadata() throws an SQLException when used
+with a parameterized MERGE query.
+   </description>
+
+   <copyright url="http://www.microsoft.com">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.microsoft.com">
+      MICROSOFT SOFTWARE LICENSE TERMS
+MICROSOFT SQL SERVER JDBC DRIVER 3.0
+These license terms are an agreement between Microsoft Corporation (or based on where you live, one of its affiliates) and you. Please read them. They apply to the software named above, which includes the media on which you received it, if any. The terms also apply to any Microsoft
+• updates,
+• supplements,
+• Internet-based services, and 
+• support services
+for this software, unless other terms accompany those items. If so, those terms apply.
+BY USING THE SOFTWARE, YOU ACCEPT THESE TERMS. IF YOU DO NOT ACCEPT THEM, DO NOT USE THE SOFTWARE.
+If you comply with these license terms, you have the rights below.
+1. INSTALLATION AND USE RIGHTS. You may install and use any number of copies of the software on your devices .
+2. SCOPE OF LICENSE. The software is licensed, not sold. This agreement only gives you some rights to use the software. Microsoft reserves all other rights. Unless applicable law gives you more rights despite this limitation, you may use the software only as expressly permitted in this agreement. In doing so, you must comply with any technical limitations in the software that only allow you to use it in certain ways. You may not
+• work around any technical limitations in the software;
+• reverse engineer, decompile or disassemble the software, except and only to the extent that applicable law expressly permits, despite this limitation;
+• make more copies of the software than specified in this agreement or allowed by applicable law, despite this limitation;
+• publish the software for others to copy;
+• rent, lease or lend the software; or
+• use the software for commercial software hosting services.
+3. BACKUP COPY. You may make one backup copy of the software. You may use it only to reinstall the software.
+4. DOCUMENTATION. Any person that has valid access to your computer or internal network may copy and use the documentation for your internal, reference purposes.
+5. TRANSFER TO A THIRD PARTY. The first user of the software may transfer it and this agreement directly to a third party. Before the transfer, that party must agree that this agreement applies to the transfer and use of the software. The first user must uninstall the software before transferring it separately from the device. The first user may not retain any copies.
+6. EXPORT RESTRICTIONS. The software is subject to United States export laws and regulations. You must comply with all domestic and international export laws and regulations that apply to the software. These laws include restrictions on destinations, end users and end use. For additional information, see www.microsoft.com/exporting.
+7. SUPPORT SERVICES. Because this software is “as is,” we may not provide support services for it.
+8. ENTIRE AGREEMENT. This agreement, and the terms for supplements, updates, Internet-based services and support services that you use, are the entire agreement for the software and support services.
+9. APPLICABLE LAW.
+a. United States. If you acquired the software in the United States, Washington state law governs the interpretation of this agreement and applies to claims for breach of it, regardless of conflict of laws principles. The laws of the state where you live govern all other claims, including claims under state consumer protection laws, unfair competition laws, and in tort.
+b. Outside the United States. If you acquired the software in any other country, the laws of that country apply.
+10. LEGAL EFFECT. This agreement describes certain legal rights. You may have other rights under the laws of your country. You may also have rights with respect to the party from whom you acquired the software. This agreement does not change your rights under the laws of your country if the laws of your country do not permit it to do so.
+11. DISCLAIMER OF WARRANTY. THE SOFTWARE IS LICENSED “AS-IS.” YOU BEAR THE RISK OF USING IT. MICROSOFT GIVES NO EXPRESS WARRANTIES, GUARANTEES OR CONDITIONS. YOU MAY HAVE ADDITIONAL CONSUMER RIGHTS UNDER YOUR LOCAL LAWS WHICH THIS AGREEMENT CANNOT CHANGE. TO THE EXTENT PERMITTED UNDER YOUR LOCAL LAWS, MICROSOFT EXCLUDES THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+12. LIMITATION ON AND EXCLUSION OF REMEDIES AND DAMAGES. YOU CAN RECOVER FROM MICROSOFT AND ITS SUPPLIERS ONLY DIRECT DAMAGES UP TO U.S. $5.00. YOU CANNOT RECOVER ANY OTHER DAMAGES, INCLUDING CONSEQUENTIAL, LOST PROFITS, SPECIAL, INDIRECT OR INCIDENTAL DAMAGES.
+This limitation applies to
+• anything related to the software, services, content (including code) on third party Internet sites, or third party programs; and
+• claims for breach of contract, breach of warranty, guarantee or condition, strict liability, negligence, or other tort to the extent permitted by applicable law.
+It also applies even if Microsoft knew or should have known about the possibility of the damages. The above limitation or exclusion may not apply to you because your country may not allow the exclusion or limitation of incidental, consequential or other damages.
+   </license>
+
+   <plugin
+         id="com.microsoft.sqlserver.jdbc"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+</feature>

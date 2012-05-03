@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false">
+	<class name="org.eclipse.emf.teneo.samples.emf.annotations.embedded.impl.EmbedderImpl" entity-name="Embedder" abstract="false" lazy="false" discriminator-value="Embedder" table="`embedder`">
+		<meta attribute="eclassName">Embedder</meta>
+		<meta attribute="epackage">http://www.eclipse.org/emf/teneo/samples/emf/annotations/embedded</meta>
+		<id type="long" name="e_id" column="e_id" access="org.eclipse.emf.teneo.hibernate.mapping.identifier.IdentifierPropertyHandler">
+			<meta attribute="syntheticId">true</meta>
+			<generator class="native"/>
+		</id>
+		<discriminator column="`dtype`" type="string"/>
+		<version name="e_version" column="e_version" access="org.eclipse.emf.teneo.hibernate.mapping.property.VersionPropertyHandler">
+			<meta attribute="syntheticVersion">true</meta>
+		</version>
+		<component name="firstEmbedded" class="org.eclipse.emf.teneo.samples.emf.annotations.embedded.impl.EmbeddableImpl">
+			<property name="myString" lazy="false" insert="true" update="true" not-null="true" unique="false" type="java.lang.String">
+				<column not-null="false" unique="false" name="`columnstring3`"/>
+			</property>
+			<property name="myInteger" lazy="false" insert="true" update="true" not-null="false" unique="false" type="int">
+				<column not-null="false" unique="false" name="`firstembedded_myinteger`"/>
+			</property>
+		</component>
+		<component name="secondEmbedded" class="org.eclipse.emf.teneo.samples.emf.annotations.embedded.impl.EmbeddableImpl">
+			<property name="myString" lazy="false" insert="true" update="true" not-null="true" unique="false" type="java.lang.String">
+				<column not-null="false" unique="false" name="`columnstring1`"/>
+			</property>
+			<property name="myInteger" lazy="false" insert="true" update="true" not-null="false" unique="false" type="int">
+				<column not-null="false" unique="false" name="`columninteger1`"/>
+			</property>
+		</component>
+		<component name="thirdEmbedded" class="org.eclipse.emf.teneo.samples.emf.annotations.embedded.impl.EmbeddableImpl">
+			<property name="myString" lazy="false" insert="true" update="true" not-null="true" unique="false" type="java.lang.String">
+				<column not-null="false" unique="false" name="`columnstring2`"/>
+			</property>
+			<property name="myInteger" lazy="false" insert="true" update="true" not-null="false" unique="false" type="int">
+				<column not-null="false" unique="false" name="`columninteger2`"/>
+			</property>
+		</component>
+		<list name="fourthEmbedded" lazy="true" cascade="all,delete-orphan">
+			<key update="true">
+				<column name="`embedder_fourthembedded_e_id`" not-null="true" unique="false"/>
+			</key>
+			<list-index column="`embedder_fourthembedded_idx`"/>
+			<composite-element class="org.eclipse.emf.teneo.samples.emf.annotations.embedded.impl.EmbeddableImpl">
+				<property name="myString" lazy="false" insert="true" update="true" not-null="true" unique="false" type="java.lang.String">
+					<column not-null="true" unique="false" name="`mystring`"/>
+				</property>
+				<property name="myInteger" lazy="false" insert="true" update="true" not-null="false" unique="false" type="int">
+					<column not-null="false" unique="false" name="`myinteger`"/>
+				</property>
+			</composite-element>
+		</list>
+		<component name="fifthEmbedded" class="org.eclipse.emf.teneo.samples.emf.annotations.embedded.impl.EmbeddableImpl">
+			<property name="myString" lazy="false" insert="true" update="true" not-null="true" unique="false" type="java.lang.String">
+				<column not-null="true" unique="false" name="`fifthembedded_mystring`"/>
+			</property>
+			<property name="myInteger" lazy="false" insert="true" update="true" not-null="false" unique="false" type="int">
+				<column not-null="false" unique="false" name="`fifthembedded_myinteger`"/>
+			</property>
+		</component>
+		<component name="alsoEmbeddable" class="org.eclipse.emf.teneo.samples.emf.annotations.embedded.impl.AlsoEmbeddableImpl">
+			<property name="name" lazy="false" insert="true" update="true" not-null="true" unique="false" type="java.lang.String">
+				<column not-null="true" unique="false" name="`alsoembeddable_name`"/>
+			</property>
+		</component>
+	</class>
+</hibernate-mapping>

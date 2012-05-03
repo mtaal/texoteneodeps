@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<persistence-mapping xmlns="http://www.eclipse.org/emft/teneo"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<epackage namespace-uri="http://www.eclipse.org/emf/teneo/samples/emf/annotations/secondarytablehibernate">
+
+		<eclass name="Person">
+			<secondary-table name="person_address"/>
+			<secondary-table name="person_photo"/>
+			<property name="id">
+				<id/>
+			</property>
+			<property name="address">
+				<lob />
+				<column table="person_address"/>
+			</property>
+			<property name="photo">
+				<lob />
+				<column table="person_photo" length="1000000"/>				
+			</property>
+		</eclass>
+
+	</epackage>
+
+</persistence-mapping>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<persistence-mapping xmlns="http://www.eclipse.org/emft/teneo"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<!-- Template for TestAction persistence mapping. -->
+
+	<epackage namespace-uri="http://www.eclipse.org/emf/teneo/samples/emf/annotations/cascadenotall">
+
+		<eclass name="Writer">
+			<property name="books">
+				<one-to-many target-entity="Book" mapped-by="author">
+					<cascade>MERGE</cascade>
+					<cascade>PERSIST</cascade>
+				</one-to-many>
+			</property>
+		</eclass>
+
+		<eclass name="Library">
+			<property name="writers">
+				<one-to-many>
+					<cascade>MERGE</cascade>
+					<cascade>PERSIST</cascade>
+					<cascade>REFRESH</cascade>
+					<cascade>REMOVE</cascade>
+				</one-to-many>
+			</property>
+			<property name="books">
+				<one-to-many>
+					<cascade>MERGE</cascade>
+					<cascade>PERSIST</cascade>
+					<cascade>REFRESH</cascade>
+					<cascade>REMOVE</cascade>
+				</one-to-many>
+			</property>
+		</eclass>
+
+	</epackage>
+
+</persistence-mapping>

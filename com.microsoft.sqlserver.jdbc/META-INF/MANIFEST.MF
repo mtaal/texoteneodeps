@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Microsoft JDBC Driver
+Bundle-SymbolicName: com.microsoft.sqlserver.jdbc
+Bundle-Version: 3.0.1301.101
+Bundle-ClassPath: sqljdbc4.jar
+Bundle-Vendor: Microsoft
+Export-Package: com.microsoft.sqlserver.jdbc,
+ microsoft.sql
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

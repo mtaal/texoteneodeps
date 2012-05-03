@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+ xmlns:xsd='http://www.w3.org/2001/XMLSchema'
+ xmlns:ecore='http://www.eclipse.org/emf/2002/Ecore'
+ elementFormDefault='qualified'
+	xmlns:this="http://www.eclipse.org/emf/teneo/samples/emf/sample/claim"
+	targetNamespace="http://www.eclipse.org/emf/teneo/samples/emf/sample/claim"
+>
+    	<xsd:complexType name="ClaimCompositeKey">
+		<xsd:annotation>
+			<xsd:appinfo source="teneo.jpa">@Embeddable</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="claimNumber" type="xsd:string">
+				<xsd:annotation>
+				<xsd:appinfo source="teneo.jpa">
+					@Column(name=CLM_NBR)
+				</xsd:appinfo>
+				<xsd:documentation>
+					The Unique Identifier for a Claim. 
+				</xsd:documentation>
+			</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="claimExtensionNumber" type="xsd:string">
+				<xsd:annotation>
+				<xsd:appinfo source="teneo.jpa">
+					@Column(name=CLM_EXT_NBR)
+				</xsd:appinfo>
+				<xsd:documentation>
+					The Unique Identifier for a Claim. 
+				</xsd:documentation>
+			</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>	
+	
+	
+    <xsd:complexType name="Claim">
+	<xsd:annotation>
+      <xsd:appinfo source="teneo.jpa">	
+	@Table(
+	  name=PCLM_NPRC_CLM
+	  uniqueConstraints = {	@UniqueConstraint(columnNames={"CLM_NBR", "CLM_EXT_NBR"})
+	  					  }	  
+	)
+	</xsd:appinfo>	
+	<xsd:documentation>Claim Information</xsd:documentation>
+	</xsd:annotation>	  
+	
+	
+	<xsd:sequence>
+<!-- should we make these types objects instead of primitives?  Not sure that works in XSD. -->	
+		
+		<xsd:element name="claimCompositeKey" type="this:ClaimCompositeKey">
+				<xsd:annotation>
+					<xsd:appinfo source="teneo.jpa">@EmbeddedId</xsd:appinfo>
+				</xsd:annotation>				
+		</xsd:element>
+		
+		<xsd:element default="" name="billingName" type="xsd:string">
+			<xsd:annotation>
+				<xsd:appinfo source="teneo.jpa">@Column(name=BILLING_NAME,length="50")</xsd:appinfo>
+				<xsd:documentation>Billing Name</xsd:documentation>
+			</xsd:annotation>
+		</xsd:element>
+		
+		<xsd:element default="" name="claimGroupVSPId" type="xsd:string">
+			<xsd:annotation>
+				<xsd:appinfo source="teneo.jpa">@Column(name=CLM_GRP_VSP_ID,length="3")</xsd:appinfo>
+				<xsd:documentation>Claim Group VSP Id</xsd:documentation>
+			</xsd:annotation>
+		</xsd:element>
+
+		<!-- Enumeration? -->
+		<xsd:element default="" name="claimStatus" type="xsd:string">
+			<xsd:annotation>
+				<xsd:appinfo source="teneo.jpa">@Column(name=CLM_STATUS,length="2")</xsd:appinfo>
+				<xsd:documentation></xsd:documentation>
+			</xsd:annotation>
+		</xsd:element>
+
+
+		<xsd:element maxOccurs="unbounded" minOccurs="0" name="claimLine"
+			type="this:ClaimLine" >
+			<xsd:annotation>
+				<xsd:appinfo source="teneo.jpa">
+					@OneToMany(mappedBy="ClaimLine", indexed=false)
+					@JoinColumns({
+    					@JoinColumn(name="CLM_NBR"),
+    					@JoinColumn(name="CLM_EXT_NBR")
+    				})	
+				</xsd:appinfo>
+			</xsd:annotation>
+		</xsd:element>
+
+	</xsd:sequence>
+	
+    </xsd:complexType>
+    
+    <xsd:complexType name="ClaimLine">
+		<xsd:annotation>
+	      <xsd:appinfo source="teneo.jpa">	
+		@Table(
+		  name=PCLM_NPRC_CLMLN		  
+		  uniqueConstraints = {	@UniqueConstraint(columnNames={"CLM_NBR", "CLM_EXT_NBR", "CLMLN_NBR"})
+		  					  }	  
+		 )
+		</xsd:appinfo>	
+		<xsd:documentation>Claim Line Information</xsd:documentation>
+		</xsd:annotation>	  
+	
+	<xsd:sequence>
+
+		<xsd:element ecore:opposite="claimLine" ecore:reference="this:Claim" name="claim" type="this:Claim">
+				<xsd:annotation>
+					<xsd:appinfo source="teneo.jpa">
+						@Transient
+					</xsd:appinfo>
+					<xsd:documentation>A generated key to uniquely the parent</xsd:documentation>
+				</xsd:annotation>
+	    </xsd:element>
+
+		<xsd:element name="claimLineCompositeKey" type="this:ClaimLineCompositeKey">
+				<xsd:annotation>
+					<xsd:appinfo source="teneo.jpa">@EmbeddedId</xsd:appinfo>
+				</xsd:annotation>				
+		</xsd:element>
+		
+		<xsd:element name="claimLineBilledAmount" type="xsd:decimal">
+			<xsd:annotation>
+				<xsd:appinfo source="teneo.jpa">
+					@Column(name=CLMLN_BILL_AMT)
+				</xsd:appinfo>
+				<xsd:documentation>
+					The Unique Identifier for a Claim. 
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:element>
+	
+		<xsd:element name="serviceCode" type="xsd:string">
+			<xsd:annotation>
+				<xsd:appinfo source="teneo.jpa">
+					@Column(name=SVC_CD)
+				</xsd:appinfo>
+				<xsd:documentation>
+					The Unique Identifier for a Claim. 
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:element>
+	
+		<!-- Enumeration? -->
+		<xsd:element default="" name="claimLineStatus" type="xsd:string">
+			<xsd:annotation>
+				<xsd:appinfo source="teneo.jpa">@Column(name=CLMLN_STATUS,length="2")</xsd:appinfo>
+				<xsd:documentation></xsd:documentation>
+			</xsd:annotation>
+		</xsd:element>
+	</xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ClaimLineCompositeKey">
+		<xsd:annotation>
+			<xsd:appinfo source="teneo.jpa">@Embeddable</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ecore:reference="this:Claim" name="claim" type="this:Claim">
+					<xsd:annotation>
+						<xsd:appinfo source="teneo.jpa">
+						@ManyToOne
+						@JoinColumns({
+		    				@JoinColumn(name="CLM_NBR", referencedColumnName = "CLM_NBR"),
+		    				@JoinColumn(name="CLM_EXT_NBR", referencedColumnName ="CLM_EXT_NBR")
+		    			})
+						</xsd:appinfo>
+						<xsd:documentation>A generated key to uniquely the parent</xsd:documentation>
+					</xsd:annotation>
+		    </xsd:element>
+			
+			<xsd:element name="claimLineNumber" type="xsd:string">
+				<xsd:annotation>
+				<xsd:appinfo source="teneo.jpa">
+					@Column(name=CLMLN_NBR)
+				</xsd:appinfo>
+				<xsd:documentation>
+					The Unique Identifier for a Claim. 
+				</xsd:documentation>
+			</xsd:annotation>
+			</xsd:element>
+			
+		</xsd:sequence>
+	</xsd:complexType>
+
+    
+    
+</xsd:schema>

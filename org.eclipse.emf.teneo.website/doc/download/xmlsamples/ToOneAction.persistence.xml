@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<persistence-mapping xmlns="http://www.eclipse.org/emft/teneo"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<epackage namespace-uri="http://www.eclipse.org/emf/teneo/samples/emf/annotations/toone">
+
+		<eclass name="Head">
+			<property name="person">
+				<one-to-one target-entity="Person" optional="false" mapped-by="head" fetch="EAGER">
+					<cascade>MERGE</cascade>
+					<cascade>PERSIST</cascade>
+					<cascade>REFRESH</cascade>
+				</one-to-one>
+			</property>
+		</eclass>
+
+		<eclass name="Person">
+			<property name="address">
+				<many-to-one fetch="EAGER" target-entity="Address" optional="true">
+					<cascade>MERGE</cascade>
+					<cascade>PERSIST</cascade>
+					<cascade>REFRESH</cascade>
+				</many-to-one>
+			</property>
+			<property name="head">
+				<one-to-one fetch="EAGER" target-entity="Head" optional="true" cascade="ALL" />
+			</property>
+		</eclass>
+
+	</epackage>
+
+</persistence-mapping>

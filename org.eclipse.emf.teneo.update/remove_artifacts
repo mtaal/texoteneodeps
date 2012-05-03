@@ -1,0 +1,4 @@
+rm artifacts.jar
+rm content.jar
+rm features/*
+rm plugins/*

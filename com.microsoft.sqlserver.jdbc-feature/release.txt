@@ -1,0 +1,113 @@
+Release Information
+Microsoft SQL Server JDBC Driver 3.0 
+April 2010
+
+
+INTRODUCTION
+------------
+This file contains late-breaking or other important information
+that supplements the Microsoft SQL Server JDBC Driver
+documentation. You should read this file completely before 
+installing the JDBC driver.
+
+Your feedback is very important to us and we will strive
+to respond to your feedback in a timely manner. For information
+about providing feedback by using the JDBC driver newsgroup and online
+forums, see the Microsoft SQL Server JDBC Driver page at
+http://msdn.microsoft.com/data/jdbc.
+
+
+INSTALLATION
+------------
+Instructions for installing the JDBC driver are located in install.txt.
+Refer to that file for information about installing the JDBC
+driver on Windows and Unix operating systems.
+
+SUPPORTED OPERATING SYSTEMS
+---------------------------
+The Microsoft SQL Server JDBC Driver 3.0 supports the following operating systems: 
+Linux, Unix, Windows Server 2003 Service Pack 2, Windows Server 2008,
+Windows Vista Service Pack 1, Windows XP Service Pack 3,
+Windows Server 2008 R2 and Windows 7.
+
+The list above is an example of some of the supported operating systems.
+The JDBC driver is designed to work on any operating system that supports
+the use of a Java Virtual Machine (JVM).  However, only Sun Solaris, SUSE
+Linux, and Windows XP or later operating systems have been tested.
+
+RELEASE CONTENTS
+----------------
+The Microsoft SQL Server JDBC Driver executable zip or tar file
+unpacks the following files in the specified locations, relative
+to the selected installation directory:
+
+<installation directory>\sqljdbc_<version>\<language>\install.txt
+<installation directory>\sqljdbc_<version>\<language>\release.txt
+<installation directory>\sqljdbc_<version>\<language>\license.txt
+<installation directory>\sqljdbc_<version>\<language>\sqljdbc.jar
+<installation directory>\sqljdbc_<version>\<language>\sqljdbc4.jar
+<installation directory>\sqljdbc_<version>\<language>\auth\x86\sqljdbc_auth.dll
+<installation directory>\sqljdbc_<version>\<language>\auth\x64\sqljdbc_auth.dll
+<installation directory>\sqljdbc_<version>\<language>\auth\ia64\sqljdbc_auth.dll
+<installation directory>\sqljdbc_<version>\<language>\help\default.htm
+<installation directory>\sqljdbc_<version>\<language>\help\index.htm
+<installation directory>\sqljdbc_<version>\<language>\help\toc.htm
+<installation directory>\sqljdbc_<version>\<language>\help\html\<doc pages...>
+<installation directory>\sqljdbc_<version>\<language>\help\local\<doc files...>
+<installation directory>\sqljdbc_<version>\<language>\help\samples\<sample files...>
+<installation directory>\sqljdbc_<version>\<language>\xa\xa_install.sql
+<installation directory>\sqljdbc_<version>\<language>\xa\x86\sqljdbc_xa.dll
+<installation directory>\sqljdbc_<version>\<language>\xa\x64\sqljdbc_xa.dll
+<installation directory>\sqljdbc_<version>\<language>\xa\ia64\sqljdbc_xa.dll
+
+
+CHANGE LIST
+-----------
+Changes from 2.0 to 3.0:
+
+327029 The "Failed to load the sqljdbc_auth.dll" exception now contains additional
+       information about the cause of the failure.
+
+329180 Application servers can now use the Wrapper interface to implement proxies of
+       SQLServerDataSource instances and other classes implementing the Wrapper interface.
+
+293533 The return value of a stored procedure executed by a table trigger no longer impacts
+       the update count of an INSERT, UPDATE, or DELETE query, when lastUpdateCount=true
+
+345336 An infinite loop in Statement.close() after its underlying connection is closed
+       unexpectedly has been fixed.
+
+351393 executeUpdate now returns the correct update count for a BULK INSERT query.
+
+327052 ResultSet.getHoldability() now returns ResultSet.HOLD_CURSORS_OVER_COMMIT when
+       implicit cursor conversion produces a result set that is not backed by a
+       server cursor.
+
+374320 An infinite loop in ResultSet.close() has been fixed when the method encounters a
+       lock timeout or other row error.
+
+373923 The driver now uses the TLS protocol for its SSL communications, to comply with
+       the Federal Information Processing Standard (FIPS).
+
+376322 The driver now connects to a failover partner acting as primary in a Kerberos
+       environment.
+
+305612 ResultSet.getInt("DATA_TYPE") no longer throws a NullPointerException with
+       the TABLE SQL type.
+
+411695 getSchemas should return schema information
+       In previous versions of the driver, the driver returned user information instead of
+       the schema information.The driver will now return schema information and supports pattern
+       matching for schema name per JDBC spec.	
+
+
+KNOWN ISSUES
+------------
+The following are known issues with the Microsoft SQL Server JDBC Driver 3.0:
+
+
+1) PARAMETER METADATA LIMITATIONS WITH THE SQL MERGE STATEMENT
+
+PreparedStatement.getParameterMetadata() throws an SQLException when used
+with a parameterized MERGE query.
+

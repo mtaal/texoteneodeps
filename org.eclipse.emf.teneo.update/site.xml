@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.mysql.jdbc_5.1.11.jar" id="com.mysql.jdbc" version="5.1.11">
+      <category name="org.eclipse.emf.teneo.updatesite"/>
+   </feature>
+   <feature url="features/javax.persistence_2.0.1.jar" id="javax.persistence" version="2.0.1">
+      <category name="org.eclipse.emf.teneo.updatesite"/>
+   </feature>
+   <feature url="features/org.apache.commons.logging_1.1.1.jar" id="org.apache.commons.logging" version="1.1.1">
+      <category name="org.eclipse.emf.teneo.updatesite"/>
+   </feature>
+   <feature url="features/org.apache.log4j_1.2.16.jar" id="org.apache.log4j" version="1.2.16">
+      <category name="org.eclipse.emf.teneo.updatesite"/>
+   </feature>
+   <feature url="features/org.dom4j_1.6.1.jar" id="org.dom4j" version="1.6.1">
+      <category name="org.eclipse.emf.teneo.updatesite"/>
+   </feature>
+   <feature url="features/org.hsqldb_1.8.1.jar" id="org.hsqldb" version="1.8.1">
+      <category name="org.eclipse.emf.teneo.updatesite"/>
+   </feature>
+   <feature url="features/org.postgresql_9.0.0.801.jar" id="org.postgresql" version="9.0.0.801">
+      <category name="org.eclipse.emf.teneo.updatesite"/>
+   </feature>
+   <feature url="features/com.microsoft.sqlserver.jdbc_3.0.1301.101.jar" id="com.microsoft.sqlserver.jdbc" version="3.0.1301.101">
+      <category name="org.eclipse.emf.teneo.updatesite"/>
+   </feature>
+   <feature url="features/org.hibernate_4.1.1.jar" id="org.hibernate" version="4.1.1">
+      <category name="org.eclipse.emf.teneo.updatesite"/>
+   </feature>
+   <category-def name="org.eclipse.emf.teneo.updatesite" label="Teneo/Texo Dependencies">
+      <description>
+         Contains dependencies for the Teneo/Texo projects which can not be provided directly through an eclipse.org update site.
+      </description>
+   </category-def>
+</site>

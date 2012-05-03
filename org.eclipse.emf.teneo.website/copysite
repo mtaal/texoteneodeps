@@ -1,0 +1,1 @@
+scp -r build/site/* mtaal@elver.org:/home/mtaal/elver.org

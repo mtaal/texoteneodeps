@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<persistence-mapping xmlns="http://www.eclipse.org/emft/teneo"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<epackage namespace-uri="http://www.eclipse.org/emf/teneo/samples/emf/annotations/embeddedid">
+
+		<eclass name="Person">
+			<property name="name">
+				<embedded-id />
+			</property>
+			<property name="address">
+				<lob />
+			</property>
+		</eclass>
+
+		<eclass name="Name">
+			<embeddable />
+		</eclass>
+
+	</epackage>
+
+</persistence-mapping>

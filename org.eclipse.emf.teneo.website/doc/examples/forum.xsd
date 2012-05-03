@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.elver.org/store/test/emf/forum"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:forum="http://www.elver.org/store/test/emf/forum" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:complexType name="Topic">
+        <xsd:sequence>
+            <xsd:element name="title" type="xsd:string"/>
+            <xsd:element name="category" type="forum:TopicCategory"/>
+            <xsd:element name="creator" type="xsd:IDREF" ecore:opposite="created" ecore:reference="forum:Member"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ecore:opposite="topic"
+            	name="posts" type="xsd:IDREF" ecore:reference="forum:Post"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Member">
+        <xsd:sequence>
+            <xsd:element name="nickname" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ecore:opposite="author"
+                name="posts" type="xsd:IDREF" ecore:reference="forum:Post"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ecore:opposite="creator"
+                name="created" type="xsd:IDREF" ecore:reference="forum:Topic"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Post">
+        <xsd:sequence>
+            <xsd:element name="comment" type="xsd:string"/>
+            <xsd:element name="author" type="xsd:IDREF" ecore:opposite="posts" ecore:reference="forum:Member"/>
+            <xsd:element name="topic" type="xsd:IDREF" ecore:opposite="posts" ecore:reference="forum:Topic"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Forum">
+        <xsd:sequence>
+            <xsd:element name="title" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0"
+                name="members" type="forum:Member"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0"
+                name="topics" type="forum:Topic"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:simpleType name="TopicCategory">
+        <xsd:restriction base="xsd:NCName">
+            <xsd:enumeration value="Announcement"/>
+            <xsd:enumeration value="GuestBook"/>
+            <xsd:enumeration value="Discussion"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>

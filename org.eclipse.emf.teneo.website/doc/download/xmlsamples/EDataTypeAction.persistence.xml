@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<persistence-mapping xmlns="http://www.eclipse.org/emft/teneo"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<epackage namespace-uri="http://www.eclipse.org/emf/teneo/samples/emf/annotations/edatatype_column">
+
+		<eclass name="Book">
+			<table name="mybooktable"/>
+			<property name="title">
+				<column name="titel" unique="true" length="25"/>
+			</property>
+		</eclass>
+
+		<edatatype name="TitleType">
+			<column name="mytitle" unique="false" length="50"/>
+		</edatatype>
+		<edatatype name="PagesType">
+			<column updatable="false" insertable="false"/>
+		</edatatype>
+		<edatatype name="WeightType">
+			<column name="gewicht" nullable="true" precision="5" scale="2"/>
+		</edatatype>
+
+	</epackage>
+</persistence-mapping>

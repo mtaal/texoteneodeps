@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Copyright 2005-2006, Elver.org (http://www.elver.org).
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+		http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+-->
+
+<!--
+	@author <a href="mtaal@elver.org">Martin Taal</a>
+	@version $Revision: 1.1 $ $Date: 2006/10/15 08:41:59 $
+-->
+
+<!DOCTYPE document PUBLIC
+	"-//APACHE//DTD Documentation V2.0//EN"
+	"http://forrest.apache.org/dtd/document-v20.dtd">
+
+<document> 
+	<header> 
+		<title>List of test XML Schemas</title> 
+	</header> 
+	<body>
+		<p>The integration layer is tested with a number of different test cases. Some 
+		of these test cases are based on EMF classes generated from XML Schemas and ecore files. 
+		A subset of the used XML Schemas is provided below so they can be used to test the 
+		integration layer. For more details please get the test project from subversion (see 
+		<a href="../testcases.html">here</a>).</p>
+		<p></p>
+		<ul>
+			<li><a href="library.xsd">Library.xsd</a>: the library example</li>
+			<li><a href="Catalog.xsd">Catalog.xsd</a>: a simple product catalog</li>
+			<li><a href="PrimerPO.xsd">PrimerPO.xsd</a>: the primer example used by XML Schema and others</li>
+			<li><a href="ExtendedPO2.ecore">ExtendedPO2.ecore (note ecore file)</a>: the extended po example from the EMF book</li>
+			<li><a href="forum.xsd">Forum.xsd</a>: a simple forum</li>
+			<li><a href="sun_books.xsd">sun_books.xsd</a>: example as provided by Sun for Jaxb (see <a href="http://java.sun.com/developer/technicalArticles/WebServices/jaxb/">here</a>)</li>
+			<li><a href="play.xsd">play.xsd</a>: example on how to model theatre plays, (copied from <a href="http://www.devx.com/Java/Article/10904/0/page/1">here</a>), the test case uses
+			the following data file: <a href="play.xml">play.xml</a></li>
+		</ul>
+	</body>
+</document>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	targetNamespace="http://www.elver.org/store/test/emf/sample/play"
+	xmlns="http://www.elver.org/store/test/emf/sample/play"
+	xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:jxb="http://java.sun.com/xml/ns/jaxb" 
+	jxb:version="1.0">
+	
+	<!-- Schema found in an older article here: http://www.devx.com/Java/Article/10904/0/page/1 -->
+	
+	<xs:annotation>
+		<xs:appinfo>
+			<jxb:globalBindings
+				collectionType="java.util.Vector" />
+		</xs:appinfo>
+	</xs:annotation>
+
+	<xs:element name="act">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="scene" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="index" type="xs:byte" use="required"/>
+			<xs:attribute name="title" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="fm">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="p" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="groupDescription" type="xs:string"/>
+	<xs:element name="line" type="xs:string"/>
+	<xs:element name="p" type="xs:string"/>
+	<xs:element name="persona" type="xs:string"/>
+	<xs:element name="personaGroup">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="persona" maxOccurs="unbounded"/>
+				<xs:element ref="groupDescription"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="personae">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="title"/>
+				<xs:element ref="persona"/>
+				<xs:element ref="personaGroup"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="play">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="title"/>
+				<xs:element ref="fm"/>
+				<xs:element ref="personae"/>
+				<xs:element ref="sceneDescription"/>
+				<xs:element ref="playSubTitle"/>
+				<xs:element ref="act" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="playSubTitle" type="xs:string"/>
+	<xs:element name="scene">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="stageDirections"/>
+				<xs:element ref="speech"/>
+			</xs:choice>
+			<xs:attribute name="index" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:NMTOKEN">
+						<xs:enumeration value="1"/>
+						<xs:enumeration value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="title" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="sceneDescription" type="xs:string"/>
+	<xs:element name="speaker" type="xs:string"/>
+	<xs:element name="speech">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="speaker"/>
+				<xs:element ref="line"/>
+				<xs:element ref="stageDirections"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="stageDirections" type="xs:string"/>
+	<xs:element name="title" type="xs:string"/>
+</xs:schema>

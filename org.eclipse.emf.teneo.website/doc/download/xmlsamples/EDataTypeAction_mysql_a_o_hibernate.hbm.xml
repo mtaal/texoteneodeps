@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false">
+	<class name="org.eclipse.emf.teneo.samples.emf.annotations.edatatypeColumn.impl.BookImpl" entity-name="Book" abstract="false" lazy="false" discriminator-value="Book" table="`mybooktable`">
+		<meta attribute="eclassName">Book</meta>
+		<meta attribute="epackage">http://www.eclipse.org/emf/teneo/samples/emf/annotations/edatatype_column</meta>
+		<id type="long" name="e_id" column="e_id" access="org.eclipse.emf.teneo.hibernate.mapping.identifier.IdentifierPropertyHandler">
+			<meta attribute="syntheticId">true</meta>
+			<generator class="native"/>
+		</id>
+		<discriminator column="`dtype`" type="string"/>
+		<version name="e_version" column="e_version" access="org.eclipse.emf.teneo.hibernate.mapping.property.VersionPropertyHandler">
+			<meta attribute="syntheticVersion">true</meta>
+		</version>
+		<property name="title" lazy="false" insert="true" update="true" not-null="true" unique="true" type="java.lang.String">
+			<column not-null="false" unique="true" name="`titel`" length="25"/>
+		</property>
+		<property name="pages" lazy="false" insert="false" update="false" not-null="false" unique="false" type="int">
+			<column not-null="false" unique="false" name="`pages`"/>
+		</property>
+		<property name="weight" lazy="false" insert="true" update="true" not-null="true" unique="false" type="java.math.BigDecimal">
+			<column not-null="false" unique="false" name="`gewicht`" precision="5" scale="2"/>
+		</property>
+		<property name="author" lazy="false" insert="true" update="true" not-null="true" unique="false" type="java.lang.String">
+			<column not-null="true" unique="false" name="`author`"/>
+		</property>
+	</class>
+</hibernate-mapping>

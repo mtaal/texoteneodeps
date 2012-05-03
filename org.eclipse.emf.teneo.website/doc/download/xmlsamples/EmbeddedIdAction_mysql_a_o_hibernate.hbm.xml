@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false">
+	<class name="org.eclipse.emf.teneo.samples.emf.annotations.embeddedid.impl.PersonImpl" entity-name="Person" abstract="false" lazy="false" discriminator-value="Person" table="`person`">
+		<meta attribute="eclassName">Person</meta>
+		<meta attribute="epackage">http://www.eclipse.org/emf/teneo/samples/emf/annotations/embeddedid</meta>
+		<composite-id name="name" class="org.eclipse.emf.teneo.samples.emf.annotations.embeddedid.impl.NameImpl">
+			<key-property name="firstName" type="java.lang.String">
+				<column not-null="true" unique="false" name="`firstname`"/>
+			</key-property>
+			<key-property name="lastName" type="java.lang.String">
+				<column not-null="true" unique="false" name="`lastname`"/>
+			</key-property>
+		</composite-id>
+		<discriminator column="`dtype`" type="string"/>
+		<version name="e_version" column="e_version" access="org.eclipse.emf.teneo.hibernate.mapping.property.VersionPropertyHandler">
+			<meta attribute="syntheticVersion">true</meta>
+		</version>
+		<property name="address" lazy="false" insert="true" update="true" not-null="false" unique="false" type="text">
+			<column not-null="false" unique="false" name="`address`"/>
+		</property>
+	</class>
+</hibernate-mapping>
