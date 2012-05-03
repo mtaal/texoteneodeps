@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<project name="Test" default="default">
+
+	<target name="default" >
+				
+		<!-- Note copied from CDO build -->
+		<echo message="Creating human readable index.html" />
+		<unzip src="../content.jar" dest=".." />
+		<xslt style="content2html.xsl" in="../content.xml" out="../index.html" />
+		<xslt style="content2xml.xsl" in="../content.xml" out="../index.xml" />
+		<delete file="../content.xml" />
+
+		<!--xslt style="content2xml.xsl" in="content.xml" out="index.xml" /-->
+	</target>
+
+</project>
