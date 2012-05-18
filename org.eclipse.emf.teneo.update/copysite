@@ -1,1 +1,1 @@
-scp -r * mtaal@elver.org:/home/mtaal/elver.org/eclipse/update
+scp -r * mtaal@elver.org:/home/mtaal/elver.org/eclipse/2.0.0/update
