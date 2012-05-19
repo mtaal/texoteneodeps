@@ -247,7 +247,7 @@ limitations under the License.
    </license>
 
    <url>
-      <update label="Teneo Hibernate Dependencies" url="http://www.elver.org/eclipse/update"/>
+      <update label="Teneo Hibernate Dependencies" url="http://www.elver.org/eclipse/2.0.0/update"/>
    </url>
 
    <plugin
