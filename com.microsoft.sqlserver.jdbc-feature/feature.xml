@@ -2,7 +2,7 @@
 <feature
       id="com.microsoft.sqlserver.jdbc"
       label="Microsoft JDBC Driver"
-      version="3.0.1301.101"
+      version="3.0.1301.qualifier"
       provider-name="Microsoft">
 
    <description url="http://msdn.microsoft.com/en-us/sqlserver/aa937724">
@@ -106,7 +106,7 @@ Changes from 2.0 to 3.0:
 411695 getSchemas should return schema information
        In previous versions of the driver, the driver returned user information instead of
        the schema information.The driver will now return schema information and supports pattern
-       matching for schema name per JDBC spec.	
+       matching for schema name per JDBC spec. 
 
 
 KNOWN ISSUES

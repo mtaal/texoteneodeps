@@ -2,7 +2,7 @@
 <feature
       id="com.mysql.jdbc"
       label="MySQL Connector/J"
-      version="5.1.11"
+      version="5.1.11.qualifier"
       provider-name="elver.org">
 
    <description url="http://dev.mysql.com/doc/refman/5.0/en/connector-j.html">

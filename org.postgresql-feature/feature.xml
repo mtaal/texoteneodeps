@@ -2,7 +2,7 @@
 <feature
       id="org.postgresql"
       label="Postgresql"
-      version="9.0.0.801"
+      version="9.0.0.qualifier"
       provider-name="postgresql.org">
 
    <description url="http://www.postgresql.org">

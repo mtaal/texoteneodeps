@@ -2,7 +2,7 @@
 <feature
       id="org.hibernate"
       label="Hibernate"
-      version="4.1.1"
+      version="4.1.1.qualifier"
       provider-name="elver.org">
 
    <description url="http://www.hibernate.org">

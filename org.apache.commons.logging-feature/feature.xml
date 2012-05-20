@@ -2,7 +2,7 @@
 <feature
       id="org.apache.commons.logging"
       label="Apache Commons Logging"
-      version="1.1.1"
+      version="1.1.1.qualifier"
       provider-name="elver.org">
 
    <description url="http://commons.apache.org/logging/">

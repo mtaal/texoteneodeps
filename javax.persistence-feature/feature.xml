@@ -2,7 +2,7 @@
 <feature
       id="javax.persistence"
       label="Javax Persistence"
-      version="2.0.1"
+      version="2.0.1.qualifier"
       provider-name="EclipseLink - Eclipse">
 
    <description url="http://jcp.org/aboutJava/communityprocess/final/jsr220/index.html">

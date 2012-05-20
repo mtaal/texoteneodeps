@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Mysql Jdbc
 Bundle-SymbolicName: com.mysql.jdbc
-Bundle-Version: 5.1.11
+Bundle-Version: 5.1.11.qualifier
 Bundle-Vendor: elver.org
 Export-Package: com.mysql.jdbc;version="5.1.11",
  com.mysql.jdbc.exceptions;version="5.1.11",

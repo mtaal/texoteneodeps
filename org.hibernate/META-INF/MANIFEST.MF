@@ -3,7 +3,7 @@ Eclipse-BuddyPolicy: dependent
 Bundle-ManifestVersion: 2
 Bundle-Name: Hibernate 4.1.1
 Bundle-SymbolicName: org.hibernate
-Bundle-Version: 4.1.1
+Bundle-Version: 4.1.1.qualifier
 DynamicImport-Package: *
 Bundle-ClassPath: antlr-2.7.7.jar,
  c3p0-0.9.1.jar,

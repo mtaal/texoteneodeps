@@ -15,7 +15,7 @@ TSTAMP: 1150
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Implementation-Vendor: Eclipse.org - EclipseLink Project
 Bundle-Vendor: Eclipse.org - EclipseLink Project
-Bundle-Version: 2.0.1
+Bundle-Version: 2.0.1.qualifier
 Bnd-LastModified: 1275580260875
 Bundle-ManifestVersion: 2
 Include-Resource: ../../../about.html,../../../readme.html,../../../li
