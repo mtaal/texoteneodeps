@@ -2,7 +2,7 @@
 <feature
       id="org.hsqldb"
       label="HSQLDB"
-      version="2.2.8"
+      version="2.2.8.qualifier"
       provider-name="elver.org">
 
    <description url="http://hsqldb.org">

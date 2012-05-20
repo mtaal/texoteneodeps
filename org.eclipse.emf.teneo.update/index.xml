@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <release tag="" integration="true" repository="Update Site">
-<element name="com.microsoft.sqlserver.jdbc" version="3.0.1301.201205200850" type="org.eclipse.update.feature"/>
-<element name="com.mysql.jdbc" version="5.1.11.201205200850" type="org.eclipse.update.feature"/>
-<element name="javax.persistence" version="2.0.1.201205200850" type="org.eclipse.update.feature"/>
-<element name="org.apache.commons.logging" version="1.1.1.201205200850" type="org.eclipse.update.feature"/>
-<element name="org.apache.log4j" version="1.2.16.201205200850" type="org.eclipse.update.feature"/>
-<element name="org.dom4j" version="1.6.1.201205200850" type="org.eclipse.update.feature"/>
-<element name="org.hibernate" version="4.1.1.201205200850" type="org.eclipse.update.feature"/>
-<element name="org.postgresql" version="9.0.0.201205200850" type="org.eclipse.update.feature"/>
-<element name="com.microsoft.sqlserver.jdbc" version="3.0.1301.201205200850" type="osgi.bundle"/>
-<element name="com.mysql.jdbc" version="5.1.11.201205200850" type="osgi.bundle"/>
-<element name="javax.persistence" version="2.0.1.201205200850" type="osgi.bundle"/>
-<element name="org.apache.commons.logging" version="1.1.1.201205200850" type="osgi.bundle"/>
-<element name="org.apache.log4j" version="1.2.16.201205200850" type="osgi.bundle"/>
-<element name="org.dom4j" version="1.6.1.201205200850" type="osgi.bundle"/>
-<element name="org.hibernate" version="4.1.1.201205200850" type="osgi.bundle"/>
-<element name="org.postgresql" version="9.0.0.201205200850" type="osgi.bundle"/>
+<element name="com.microsoft.sqlserver.jdbc" version="3.0.1301.201205201951" type="org.eclipse.update.feature"/>
+<element name="com.mysql.jdbc" version="5.1.11.201205201951" type="org.eclipse.update.feature"/>
+<element name="javax.persistence" version="2.0.1.201205201951" type="org.eclipse.update.feature"/>
+<element name="org.apache.commons.logging" version="1.1.1.201205201951" type="org.eclipse.update.feature"/>
+<element name="org.apache.log4j" version="1.2.16.201205201951" type="org.eclipse.update.feature"/>
+<element name="org.dom4j" version="1.6.1.201205201951" type="org.eclipse.update.feature"/>
+<element name="org.hibernate" version="4.1.1.201205201951" type="org.eclipse.update.feature"/>
+<element name="org.hsqldb" version="2.2.8.201205201951" type="org.eclipse.update.feature"/>
+<element name="org.postgresql" version="9.0.0.201205201951" type="org.eclipse.update.feature"/>
+<element name="com.microsoft.sqlserver.jdbc" version="3.0.1301.201205201951" type="osgi.bundle"/>
+<element name="com.mysql.jdbc" version="5.1.11.201205201951" type="osgi.bundle"/>
+<element name="javax.persistence" version="2.0.1.201205201951" type="osgi.bundle"/>
+<element name="org.apache.commons.logging" version="1.1.1.201205201951" type="osgi.bundle"/>
+<element name="org.apache.log4j" version="1.2.16.201205201951" type="osgi.bundle"/>
+<element name="org.dom4j" version="1.6.1.201205201951" type="osgi.bundle"/>
+<element name="org.hibernate" version="4.1.1.201205201951" type="osgi.bundle"/>
+<element name="org.hsqldb" version="2.2.8.201205201951" type="osgi.bundle"/>
+<element name="org.postgresql" version="9.0.0.201205201951" type="osgi.bundle"/>
 </release>
