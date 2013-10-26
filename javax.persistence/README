@@ -1,0 +1,10 @@
+NOTE: this plugin is derived/created from the javax.persistence 2.1.0 plugin
+from the EclipseLink project. 
+The version: 2.1.0.v201304241213
+
+The following packages/classes where removed to make it a standard
+javax.persistence plugin:
+org/eclipse/persistence/javax/persistence/osgi
+org/osgi/service/jpa
+
+Also related paths etc. were removed from the MANIFEST.MF
