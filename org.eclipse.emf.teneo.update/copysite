@@ -1,1 +1,17 @@
+cd /home/mtaal/mydata/dev/git/texoteneodeps/org.eclipse.emf.teneo.update
+
+mkdir _temp
+
+cp -r plugins _temp/
+cp -r features _temp/
+cp content.jar _temp/
+cp artifacts.jar _temp/
+cp site.xml _temp/
+cp index.* _temp/
+
+cd _temp
+zip -R teneotexodeps * */* */*/*
+
 scp -r * mtaal@elver.org:/home/mtaal/elver.org/eclipse/2.0.0/update
+cd ..
+rm -rf _temp
