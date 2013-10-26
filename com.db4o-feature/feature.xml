@@ -2,7 +2,7 @@
 <feature
       id="com.db4o"
       label="DB4O Driver"
-      version="7.4.155.v20120928-1733"
+      version="8.0.249.16098"
       provider-name="Net4j and CDO Plus">
 
    <description url="http://www.db4o.com/about/productinformation">
@@ -476,14 +476,14 @@ Legal advisors do not agree on the exact definition of what actions triggers you
    </license>
 
    <url>
-      <update label="Net4j and CDO Plus" url="http://net4j.sourceforge.net/update"/>
+      <update label="Teneo Hibernate Dependencies" url="http://www.elver.org/eclipse/2.1.0/update"/>
    </url>
 
    <plugin
          id="com.db4o"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="8.0.249.16098"
          unpack="false"/>
 
 </feature>

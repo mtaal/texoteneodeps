@@ -2,7 +2,7 @@
 <feature
       id="com.microsoft.sqlserver.jdbc"
       label="Microsoft JDBC Driver"
-      version="3.0.1301.qualifier"
+      version="4.0.2206.100"
       provider-name="Microsoft">
 
    <description url="http://msdn.microsoft.com/en-us/sqlserver/aa937724">
@@ -161,10 +161,14 @@ This limitation applies to
 It also applies even if Microsoft knew or should have known about the possibility of the damages. The above limitation or exclusion may not apply to you because your country may not allow the exclusion or limitation of incidental, consequential or other damages.
    </license>
 
+   <url>
+      <update label="Teneo Hibernate Dependencies" url="http://www.elver.org/eclipse/2.1.0/update"/>
+   </url>
+
    <plugin
          id="com.microsoft.sqlserver.jdbc"
          download-size="0"
          install-size="0"
-         version="0.0.0"/>
+         version="4.0.2206.100"/>
 
 </feature>

@@ -1,31 +1,20 @@
 Manifest-Version: 1.0
-Export-Package: javax.persistence;jpa="2.0";version="2.0.1";uses:="javax.persistence.criteria,javax.persistence.metamodel,javax.persistence.spi",
- javax.persistence.criteria;jpa="2.0";version="2.0.1";uses:="javax.persistence.metamodel,javax.persistence",
- javax.persistence.metamodel;jpa="2.0";version="2.0.1",
- javax.persistence.spi;jpa="2.0";version="2.0.1";uses:="javax.persistence,javax.sql"
-Implementation-Version: 2.0.1
+Export-Package: javax.persistence;jpa="2.1";version="2.1.0",javax.pers
+ istence.criteria;jpa="2.1";version="2.1.0",javax.persistence.metamode
+ l;jpa="2.1";version="2.1.0",javax.persistence.spi;jpa="2.1";version="
+ 2.1.0"
+Implementation-Version: 2.1.0
 Bundle-ClassPath: .
-Specification-Vendor: Sun Microsystems Inc.
-Tool: Bnd-0.0.384
-DSTAMP: 20100603
-Bundle-Name: Java Persistence API 2.0
-TODAY: June 3 2010
-Created-By: 1.6.0_06 (Sun Microsystems Inc.)
-TSTAMP: 1150
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Implementation-Vendor: Eclipse.org - EclipseLink Project
+Built-By: egwin
+Specification-Vendor: Oracle
+Bundle-Name: Java Persistence API 2.1
+Created-By: 1.6.0_35 (Sun Microsystems Inc.)
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Implementation-Vendor: Eclipse.org - EclipseLink Project - TENEO
 Bundle-Vendor: Eclipse.org - EclipseLink Project
-Bundle-Version: 2.0.1.qualifier
-Bnd-LastModified: 1275580260875
+Bundle-Version: 2.1.0
+Build-Jdk: 1.6.0_43
 Bundle-ManifestVersion: 2
-Include-Resource: ../../../about.html,../../../readme.html,../../../li
- cense.html,./readme.txt,javax/persistence/orm_1_0.xsd=./src/javax/per
- sistence/orm_1_0.xsd,javax/persistence/orm_2_0.xsd=./src/javax/persis
- tence/orm_2_0.xsd,javax/persistence/persistence_1_0.xsd=./src/javax/p
- ersistence/persistence_1_0.xsd,javax/persistence/persistence_2_0.xsd=
- ./src/javax/persistence/persistence_2_0.xsd
-Import-Package: javax.sql;resolution:=optional,org.osgi.framework;reso
- lution:=optional,org.osgi.util.tracker;resolution:=optional
-Specification-Version: 2.0
 Bundle-SymbolicName: javax.persistence
-
+Specification-Version: 2.1
+Extension-Name: javax.persistence

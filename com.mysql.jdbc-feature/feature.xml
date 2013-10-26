@@ -2,8 +2,8 @@
 <feature
       id="com.mysql.jdbc"
       label="MySQL Connector/J"
-      version="5.1.11.qualifier"
-      provider-name="elver.org">
+      version="5.1.26"
+      provider-name="mysql.org">
 
    <description url="http://dev.mysql.com/doc/refman/5.0/en/connector-j.html">
       MySQL provides connectivity for client applications developed in the Java programming language via a JDBC driver, which is called MySQL Connector/J.
@@ -376,14 +376,14 @@ contact me &lt;mark@mysql.com&gt; or &lt;sales@mysql.com&gt;.
    </license>
 
    <url>
-      <update label="Teneo Hibernate Dependencies" url="http://www.elver.org/eclipse/2.0.0/update"/>
+      <update label="Teneo Hibernate Dependencies" url="http://www.elver.org/eclipse/2.1.0/update"/>
    </url>
 
    <plugin
          id="com.mysql.jdbc"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="5.1.26"
          unpack="false"/>
 
 </feature>

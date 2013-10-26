@@ -1,33 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/javax.persistence_2.0.1.201310261216.jar" id="javax.persistence" version="2.0.1.201310261216">
+   <feature url="features/org.postgresql_9.2.1003.jar" id="org.postgresql" version="9.2.1003">
       <category name="org.eclipse.emf.teneo.updatesite"/>
    </feature>
-   <feature url="features/org.apache.commons.logging_1.1.1.201310261216.jar" id="org.apache.commons.logging" version="1.1.1.201310261216">
+   <feature url="features/com.mysql.jdbc_5.1.26.jar" id="com.mysql.jdbc" version="5.1.26">
       <category name="org.eclipse.emf.teneo.updatesite"/>
    </feature>
-   <feature url="features/org.apache.log4j_1.2.16.201310261216.jar" id="org.apache.log4j" version="1.2.16.201310261216">
+   <feature url="features/org.hibernate_4.2.7.SP1.jar" id="org.hibernate" version="4.2.7.SP1">
       <category name="org.eclipse.emf.teneo.updatesite"/>
    </feature>
-   <feature url="features/org.dom4j_1.6.1.201310261216.jar" id="org.dom4j" version="1.6.1.201310261216">
+   <feature url="features/com.db4o_8.0.249.16098.jar" id="com.db4o" version="8.0.249.16098">
       <category name="org.eclipse.emf.teneo.updatesite"/>
    </feature>
-   <feature url="features/org.postgresql_9.0.0.201310261216.jar" id="org.postgresql" version="9.0.0.201310261216">
+   <feature url="features/com.microsoft.sqlserver.jdbc_4.0.2206.100.jar" id="com.microsoft.sqlserver.jdbc" version="4.0.2206.100">
       <category name="org.eclipse.emf.teneo.updatesite"/>
    </feature>
-   <feature url="features/com.microsoft.sqlserver.jdbc_3.0.1301.201310261216.jar" id="com.microsoft.sqlserver.jdbc" version="3.0.1301.201310261216">
+   <feature url="features/javax.persistence_2.1.0.jar" id="javax.persistence" version="2.1.0">
       <category name="org.eclipse.emf.teneo.updatesite"/>
    </feature>
-   <feature url="features/org.hibernate_4.1.1.201310261216.jar" id="org.hibernate" version="4.1.1.201310261216">
-      <category name="org.eclipse.emf.teneo.updatesite"/>
-   </feature>
-   <feature url="features/org.hsqldb_2.2.8.201310261216.jar" id="org.hsqldb" version="2.2.8.201310261216">
-      <category name="org.eclipse.emf.teneo.updatesite"/>
-   </feature>
-   <feature url="features/com.db4o_7.4.155.v20120928-1733.jar" id="com.db4o" version="7.4.155.v20120928-1733">
-      <category name="org.eclipse.emf.teneo.updatesite"/>
-   </feature>
-   <feature url="features/com.mysql.jdbc_5.1.11.201310261216.jar" id="com.mysql.jdbc" version="5.1.11.201310261216">
+   <feature url="features/org.dom4j_1.6.1.jar" id="org.dom4j" version="1.6.1">
       <category name="org.eclipse.emf.teneo.updatesite"/>
    </feature>
    <category-def name="org.eclipse.emf.teneo.updatesite" label="Teneo/Texo Dependencies">

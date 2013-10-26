@@ -2,8 +2,8 @@
 <feature
       id="org.dom4j"
       label="Dom4j"
-      version="1.6.1.qualifier"
-      provider-name="elver.org">
+      version="1.6.1"
+      provider-name="dom4j.org">
 
    <description url="http://www.example.com/description">
       dom4j is a simple and flexible open source library for working with XML, XPath and XSLT on the Java platform using the Java Collections Framework with fullintegration with DOM, SAX and JAXP.
@@ -88,14 +88,14 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
    </license>
 
    <url>
-      <update label="Teneo Hibernate Dependencies" url="http://www.elver.org/eclipse/2.0.0/update"/>
+      <update label="Teneo Hibernate Dependencies" url="http://www.elver.org/eclipse/2.1.0/update"/>
    </url>
 
    <plugin
          id="org.dom4j"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.6.1"
          unpack="false"/>
 
 </feature>

@@ -2,7 +2,7 @@
 <feature
       id="javax.persistence"
       label="Javax Persistence"
-      version="2.0.1.qualifier"
+      version="2.1.0"
       provider-name="EclipseLink - Eclipse">
 
    <description url="http://jcp.org/aboutJava/communityprocess/final/jsr220/index.html">
@@ -408,14 +408,14 @@ litigation.
    </license>
 
    <url>
-      <update label="Teneo Hibernate Dependencies" url="http://www.elver.org/eclipse/2.0.0/update"/>
+      <update label="Teneo Hibernate Dependencies" url="http://www.elver.org/eclipse/2.1.0/update"/>
    </url>
 
    <plugin
          id="javax.persistence"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="2.1.0"
          unpack="false"/>
 
 </feature>

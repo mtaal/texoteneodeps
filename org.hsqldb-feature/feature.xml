@@ -2,8 +2,8 @@
 <feature
       id="org.hsqldb"
       label="HSQLDB"
-      version="2.2.8.qualifier"
-      provider-name="elver.org">
+      version="2.3.1"
+      provider-name="hsqldb.org">
 
    <description url="http://hsqldb.org">
       HSQLDB (HyperSQL DataBase) is the leading SQL relational database engine written in Java. It has a JDBC driver and supports a rich subset of ANSI-92 SQL (BNF tree format) plus SQL 99 and 2003 enhancements. It offers a small (less than 100k in one version for applets), fast database engine which offers both in-memory and disk-based tables and supports embedded and server modes. Additionally, it includes tools such as a minimal web server, in-memory query and management tools (can be run as applets) and a number of demonstration examples.
@@ -165,13 +165,13 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
    </license>
 
    <url>
-      <update label="Teneo Hibernate Dependencies" url="http://www.elver.org/eclipse/2.0.0/update"/>
+      <update label="Teneo Hibernate Dependencies" url="http://www.elver.org/eclipse/2.1.0/update"/>
    </url>
 
    <plugin
          id="org.hsqldb"
          download-size="0"
          install-size="0"
-         version="0.0.0"/>
+         version="2.3.1"/>
 
 </feature>

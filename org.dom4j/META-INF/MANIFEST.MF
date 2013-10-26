@@ -2,8 +2,8 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Dom4j
 Bundle-SymbolicName: org.dom4j
-Bundle-Version: 1.6.1.qualifier
-Bundle-Vendor: elver.org
+Bundle-Version: 1.6.1
+Bundle-Vendor: dom4j.org
 Export-Package: org.dom4j;version="1.6.1",
  org.dom4j.bean;version="1.6.1",
  org.dom4j.datatype;version="1.6.1",
