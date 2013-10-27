@@ -21,6 +21,9 @@
    <feature url="features/org.dom4j_1.6.1.jar" id="org.dom4j" version="1.6.1">
       <category name="org.eclipse.emf.teneo.updatesite"/>
    </feature>
+   <feature url="features/org.hsqldb_2.3.1.jar" id="org.hsqldb" version="2.3.1">
+      <category name="org.eclipse.emf.teneo.updatesite"/>
+   </feature>
    <category-def name="org.eclipse.emf.teneo.updatesite" label="Teneo/Texo Dependencies">
       <description>
          Contains dependencies for the Teneo/Texo projects which can not be provided directly through an eclipse.org update site.
