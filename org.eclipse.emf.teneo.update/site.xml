@@ -6,7 +6,7 @@
    <feature url="features/com.mysql.jdbc_5.1.26.jar" id="com.mysql.jdbc" version="5.1.26">
       <category name="org.eclipse.emf.teneo.updatesite"/>
    </feature>
-   <feature url="features/org.hibernate_4.2.7.SP1.jar" id="org.hibernate" version="4.2.7.SP1">
+   <feature url="features/org.hibernate_4.3.5.jar" id="org.hibernate" version="4.3.5">
       <category name="org.eclipse.emf.teneo.updatesite"/>
    </feature>
    <feature url="features/com.db4o_8.0.249.16098.jar" id="com.db4o" version="8.0.249.16098">
