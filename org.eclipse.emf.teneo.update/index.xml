@@ -6,7 +6,7 @@
 <element name="org.apache.log4j" version="1.2.16" type="org.eclipse.update.feature"/>
 <element name="org.dom4j" version="1.6.1" type="org.eclipse.update.feature"/>
 <element name="org.hibernate" version="4.3.7" type="org.eclipse.update.feature"/>
-<element name="org.hsqldb" version="2.3.1" type="org.eclipse.update.feature"/>
+<element name="org.hsqldb" version="2.3.2" type="org.eclipse.update.feature"/>
 <element name="org.postgresql" version="9.2.1003" type="org.eclipse.update.feature"/>
 <element name="com.db4o" version="8.0.249.16098" type="osgi.bundle"/>
 <element name="com.microsoft.sqlserver.jdbc" version="4.0.2206.100" type="osgi.bundle"/>
@@ -15,6 +15,6 @@
 <element name="org.apache.log4j" version="1.2.16" type="osgi.bundle"/>
 <element name="org.dom4j" version="1.6.1" type="osgi.bundle"/>
 <element name="org.hibernate" version="4.3.7" type="osgi.bundle"/>
-<element name="org.hsqldb" version="2.3.1" type="osgi.bundle"/>
+<element name="org.hsqldb" version="2.3.2" type="osgi.bundle"/>
 <element name="org.postgresql" version="9.2.1003" type="osgi.bundle"/>
 </release>

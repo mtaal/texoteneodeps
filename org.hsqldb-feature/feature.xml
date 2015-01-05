@@ -2,7 +2,7 @@
 <feature
       id="org.hsqldb"
       label="HSQLDB"
-      version="2.3.1"
+      version="2.3.2"
       provider-name="hsqldb.org">
 
    <description url="http://hsqldb.org">
@@ -172,6 +172,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
          id="org.hsqldb"
          download-size="0"
          install-size="0"
-         version="2.3.1"/>
+         version="2.3.2"/>
 
 </feature>
