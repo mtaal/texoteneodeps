@@ -10,7 +10,6 @@
 	<classpathentry exported="true" kind="lib" path="hibernate-c3p0-4.3.7.Final.jar"/>
 	<classpathentry exported="true" kind="lib" path="hibernate-ehcache-4.3.7.Final.jar"/>
 	<classpathentry exported="true" kind="lib" path="hibernate-entitymanager-4.3.7.Final.jar"/>
-	<classpathentry exported="true" kind="lib" path="hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
 	<classpathentry exported="true" kind="lib" path="hibernate-osgi-4.3.7.Final.jar"/>
 	<classpathentry exported="true" kind="lib" path="jandex-1.1.0.Final.jar"/>
 	<classpathentry exported="true" kind="lib" path="javassist-3.18.1-GA.jar"/>
