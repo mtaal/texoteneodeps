@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><release tag="" integration="true" repository="Update Site">
+<?xml version="1.0" encoding="UTF-8"?><release tag="" integration="true" repository="Exported Repository">
 <element name="com.db4o" version="8.0.249.16098" type="org.eclipse.update.feature"/>
 <element name="com.microsoft.sqlserver.jdbc" version="4.0.2206.100" type="org.eclipse.update.feature"/>
 <element name="com.mysql.jdbc" version="5.1.26" type="org.eclipse.update.feature"/>
