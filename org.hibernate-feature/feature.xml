@@ -2,7 +2,7 @@
 <feature
       id="org.hibernate"
       label="Hibernate"
-      version="4.3.7.1"
+      version="5.1.0.0"
       provider-name="JBos  - hibernate.org">
 
    <description url="http://www.hibernate.org">
@@ -37,6 +37,6 @@ The Apache Software Foundation (http://www.apache.org/).
          id="org.hibernate"
          download-size="0"
          install-size="0"
-         version="4.3.7.1"/>
+         version="5.1.0.0"/>
 
 </feature>

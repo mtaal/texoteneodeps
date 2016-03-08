@@ -12,6 +12,6 @@ cp index.* _temp/
 cd _temp
 zip -R teneotexodeps * */* */*/*
 
-scp -r * mtaal@elver.org:/home/mtaal/elver.org/eclipse/2.1.0/update
+scp -r * mtaal@elver.org:/home/mtaal/elver.org/eclipse/2.2.0/update
 cd ..
 rm -rf _temp
