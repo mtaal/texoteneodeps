@@ -4,7 +4,7 @@ DynamicImport-Package: *
 Bundle-ManifestVersion: 2
 Bundle-Name: Hibernate 5.1.0
 Bundle-SymbolicName: org.hibernate
-Bundle-Version: 5.1.0.0
+Bundle-Version: 5.1.0
 Bundle-ClassPath: 
  antlr-2.7.7.jar,
  c3p0-0.9.2.1.jar,

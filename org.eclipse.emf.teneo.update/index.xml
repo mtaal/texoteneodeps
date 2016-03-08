@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><release tag="" integration="true" repository="Exported Repository">
+<?xml version="1.0" encoding="UTF-8"?><release tag="" integration="true" repository="Update Site">
 <element name="com.db4o" version="8.0.249.16098" type="org.eclipse.update.feature"/>
 <element name="com.microsoft.sqlserver.jdbc" version="4.0.2206.100" type="org.eclipse.update.feature"/>
 <element name="com.mysql.jdbc" version="5.1.26" type="org.eclipse.update.feature"/>
 <element name="javax.persistence" version="2.1.0" type="org.eclipse.update.feature"/>
 <element name="org.apache.log4j" version="1.2.16" type="org.eclipse.update.feature"/>
 <element name="org.dom4j" version="1.6.1" type="org.eclipse.update.feature"/>
-<element name="org.hibernate" version="4.3.7.1" type="org.eclipse.update.feature"/>
-<element name="org.hsqldb" version="2.3.2" type="org.eclipse.update.feature"/>
+<element name="org.hibernate" version="5.1.0" type="org.eclipse.update.feature"/>
 <element name="org.postgresql" version="9.2.1003" type="org.eclipse.update.feature"/>
 <element name="com.db4o" version="8.0.249.16098" type="osgi.bundle"/>
 <element name="com.microsoft.sqlserver.jdbc" version="4.0.2206.100" type="osgi.bundle"/>
@@ -14,7 +13,6 @@
 <element name="javax.persistence" version="2.1.0" type="osgi.bundle"/>
 <element name="org.apache.log4j" version="1.2.16" type="osgi.bundle"/>
 <element name="org.dom4j" version="1.6.1" type="osgi.bundle"/>
-<element name="org.hibernate" version="4.3.7.1" type="osgi.bundle"/>
-<element name="org.hsqldb" version="2.3.2" type="osgi.bundle"/>
+<element name="org.hibernate" version="5.1.0" type="osgi.bundle"/>
 <element name="org.postgresql" version="9.2.1003" type="osgi.bundle"/>
 </release>
